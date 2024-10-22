@@ -291,7 +291,7 @@ function clearPointerTransition(pointerDegree) {
 function renderRewardBoard(remainGameTimes, specifyReward) {
     const gameNumber = allPlayTimes - remainGameTimes + 1
     rewardBoard.style.display = 'flex'
-    rewardGiftIndex.textContent = `No.${gameNumber}`
+    rewardGiftIndex.textContent = `${gameNumber} / ${allPlayTimes} `
     rewardGiftContent.textContent = specifyReward.label
 }
 
