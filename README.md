@@ -3,4 +3,5 @@
 This is a record and notes of a front-end developer's practice in situational task challenges.
 
 ## Task Menu
-Template: **No. | Task Name**
+ - Template: **No. | Task Name**
+ - No.1 | **spinning wheel game**
