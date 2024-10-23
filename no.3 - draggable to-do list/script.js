@@ -161,7 +161,18 @@ function init() {
 };
 
 // ====== addEventListener ======
-stackedListJs.addEventListener('click', function (e) {
+stackedListJs.addEventListener('click', handleToggleDone, false);
+
+form.addEventListener('submit', handleSubmit, false);
+
+init();
+
+// ====== start from here ======
+
+
+// ====== handle event ======
+
+function handleToggleDone(e) {
     const targetIsDone = e.target.classList.contains('task-done');
     const targetIsDel = e.target.classList.contains('task-del-js');
     if (targetIsDone) {
@@ -170,20 +181,14 @@ stackedListJs.addEventListener('click', function (e) {
     } else if (targetIsDel) {
         targetIsDel && delTodo(e.target.dataset.id);
     }
-}, false);
+}
 
-form.addEventListener('submit', function (e) {
+function handleSubmit(e) {
     e.preventDefault();
     const todoInput = document.getElementById('addTodo');
     addTodo(todoInput.value);
     todoInput.value = '';
-}, false);
-
-init();
-
-// ====== start from here ======
-
-
+}
 
 
 // ====== LocalStorage ======
