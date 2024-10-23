@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.css">
+    <link rel="stylesheet" href="style-default.css">
+
+    <title>Audio Player</title>
+</head>
+
+<body>
+    <div class="min-h-screen">
+        <div class="container my-0 mx-auto">
+            <div class="min-h-screen flex flex-col items-center justify-center">
+                <div class="flex items-center w-full rounded-lg bg-stone-900 text-stone-300 md:px-0 px-2">
+                    <span id="timeSpent" class="w-[70px] py-1.5 px-2.5">00:00</span>
+                    <div class="relative w-full">
+                        <input id="progress" class="progress-range w-full opacity-0" type="range" min="0" max="13.5"
+                            step="0.01" value="0" />
+                        <div class="progress-bg"></div>
+                        <div class="progress-line" id="progress-line"></div>
+                    </div>
+                    <span id="timeLeft" class="w-[70px] py-1.5 px-2.5">00:14</span>
+                </div>
+                <div class="w-full sm:w-3/5 flex justify-between my-0 mx-auto">
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-rotate-left">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </button>
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-play">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-rotate-right">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-volum">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <button type="button" class="w-[40px] py-1 px-2.5 audio-minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button type="button" class="w-[80px] text-left py-1 px-2.5 audio-forward">
+                        <i class="fa-solid fa-forward"></i> x1
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
